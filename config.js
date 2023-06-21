@@ -13,7 +13,9 @@ module.exports = {
         'DOMAIN_VERIFY' : process.env.ZL_DOMAIN,
         'SECRET_KEY' : process.env.ZL_SECRET_KEY || 'oLNP4R0OmSSOWqcJKuJf',
         'APP_ID' : process.env.ZL_APP_ID || '2030763101666336652',
-        'AUTH_URL' : process.env.ZL_AUTH_URL || 'https://oauth.zaloapp.com/v4/oa/access_token'
+        'AUTH_URL' : process.env.ZL_AUTH_URL || 'https://oauth.zaloapp.com/v4/oa/access_token',
+        'ACCESS_TOKEN' : 'E5sPAxHWmF9aYZeZzPczEcNRtdVIPCD3XyGXw1uLBZ3npsF-MUW',
+        'REFRESH_TOKEN' : 'DCcFKjWctu458dAU2FRbaNRPCcQGZ34zCmUF9aYEcNRtdVIaq'
     }
 }
 
