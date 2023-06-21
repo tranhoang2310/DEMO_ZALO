@@ -1,9 +1,9 @@
 module.exports = {
     'Salesforce' : {
-        'ORG_ID' : process.env.SF_ORG_ID || '00D1e0000008rZd',
-        'CHAT_DEPLOYMENT' : process.env.SF_CHAT_DEPLOYMENT || '5721e0000008OjV',
-        'CHAT_BUTTON' : process.env.SF_CHAT_BUTTON || '5731e0000008OfV',
-        'CHAT_ENDPOINT' : process.env.SF_CHAT_ENDPOINT || 'https://d.la1-c1-hnd.salesforceliveagent.com/chat/rest'
+        'ORG_ID' : process.env.SF_ORG_ID || '00D2w000002lREe',
+        'CHAT_DEPLOYMENT' : process.env.SF_CHAT_DEPLOYMENT || '5722w000000YcU5',
+        'CHAT_BUTTON' : process.env.SF_CHAT_BUTTON || '5732w000000Ykgd',
+        'CHAT_ENDPOINT' : process.env.SF_CHAT_ENDPOINT || 'https://d.la2-c2-ukb.salesforceliveagent.com/chat/rest/'
     },
     'Zalo' : {
         'OA_ENDPOINT' : process.env.ZL_OA_ENDPOINT || 'https://openapi.zalo.me/v2.0/oa',
