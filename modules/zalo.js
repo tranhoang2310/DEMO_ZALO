@@ -91,14 +91,7 @@ const initSession = (senderId) => {
 const zaloStartAgent = async (current_session) => {
     try {
 
-        //const authObject = await auth.getAccessToken();
-        //HoangT - Edit - Tạo access token và refresh token cố định lấy từ file config
-        authObject = {
-            'access_token': config.Zalo.ACCESS_TOKEN,
-            'refresh_token': config.Zalo.REFRESH_TOKEN,
-            'expires_in': "90000"
-        }
-        //end - HoangT - Edit - Tạo access token và refresh token cố định lấy từ file config
+        const authObject = await auth.getAccessToken();
 
         console.log('=== zaloStartAgent authObject:', JSON.stringify(authObject));
 

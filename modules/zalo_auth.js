@@ -7,19 +7,28 @@ module.exports = class ZaloAuth {
     
     constructor() {
         this.authObject = {
-            'secret_key' : config.Zalo.SECRET_KEY,
-            'app_id' : config.Zalo.APP_ID,
-            'auth_url' : config.Zalo.AUTH_URL,
+            // 'secret_key' : config.Zalo.SECRET_KEY,
+            // 'app_id' : config.Zalo.APP_ID,
+            // 'auth_url' : config.Zalo.AUTH_URL,
+
+            //HoangT - Edit - Tạo access token và refresh token cố định lấy từ file config
+            'access_token': config.Zalo.ACCESS_TOKEN,
+            'refresh_token': config.Zalo.REFRESH_TOKEN,
+            'expires_in': "90000"
+            //end - HoangT - Edit - Tạo access token và refresh token cố định lấy từ file config
         }
     }
 
     async getAccessToken() {
         try {
-            let isExpired = _isExpired(this.authObject);
-            console.log('getAccessToken isExpired:', isExpired);
-            if (isExpired) {
-                this.authObject = await _requestToken(this.authObject);
-            }
+            // let isExpired = _isExpired(this.authObject);
+            // console.log('getAccessToken isExpired:', isExpired);
+            // if (isExpired) {
+            //     this.authObject = await _requestToken(this.authObject);
+            // }
+            //HoangT - Edit - Tạo access token và refresh token cố định lấy từ file config
+            console.log('Token Default '+ this.authObject);
+            
         }
         catch(ex) {
             logger.error(`[Exception in ZaloAuth.getAccessToken] - ${ex}`);
