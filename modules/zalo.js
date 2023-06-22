@@ -97,9 +97,14 @@ const zaloStartAgent = async (current_session) => {
 
         zalo_push_send(config.Zalo.WAITING_MESSAGE, current_session);
         //const userProfileResponse = await getZaloUserInfo(current_session.chatSession.userId, config.Zalo.TOKEN);
+        console.log('=== Đã Push Waiting Message, current_session.chatSession.userId là : '+ current_session.chatSession.userId);
+
         const userProfileResponse = await getZaloUserInfo(current_session.chatSession.userId, authObject.access_token);
+        console.log('=== Đã Lấy Response User Profile');
+
         const userProfile = userProfileResponse.data;
         console.log('userProfile:', JSON.stringify(userProfile));
+
         current_session.chatSession.userName = userProfile.data.display_name;
         const sessionResponse = await liveAgent.getLiveAgentSession();
         const session = sessionResponse.data;
@@ -228,7 +233,7 @@ const getZaloUserInfo = async (userId, zaloToken) => {
     const options = {
         method: "GET",
         params: { data: userIdString },
-        url: `${config.Zalo.OA_ENDPOINT}/getprofile`,
+        url: `${config.Zalo.OA_ENDPOINT_GETPROFILE}/getprofile`,
         headers : {
             'access_token' : zaloToken
         }
