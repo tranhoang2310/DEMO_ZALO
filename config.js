@@ -1,7 +1,7 @@
 module.exports = {
     'Salesforce' : {
         'ORG_ID' : process.env.SF_ORG_ID || '00D2w000002lREe',
-        'CHAT_DEPLOYMENT' : process.env.SF_CHAT_DEPLOYMENT || '5722w000000YcU5',
+        'CHAT_DEPLOYMENT' : process.env.SF_CHAT_DEPLOYMENT || '5722w000000YhrJ',
         'CHAT_BUTTON' : process.env.SF_CHAT_BUTTON || '5732w000000Ykgd',
         'CHAT_ENDPOINT' : process.env.SF_CHAT_ENDPOINT || 'https://d.la2-c2-ukb.salesforceliveagent.com/chat/rest/'
     },
