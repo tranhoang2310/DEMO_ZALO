@@ -6,7 +6,7 @@ module.exports = {
         'CHAT_ENDPOINT' : process.env.SF_CHAT_ENDPOINT || 'https://d.la2-c2-ukb.salesforceliveagent.com/chat/rest/'
     },
     'Zalo' : {
-        'OA_ENDPOINT' : process.env.ZL_OA_ENDPOINT || 'https://openapi.zalo.me/v2.0/oa',
+        'OA_ENDPOINT' : process.env.ZL_OA_ENDPOINT || 'https://openapi.zalo.me/v3.0/oa/message/cs',
         'WAITING_MESSAGE': process.env.ZL_WAITING_MESSAGE || 'Please hang on a sec.',
         'AGENT_ACCEPT_MESSAGE':  process.env.ZL_AGENT_ACCEPT_MESSAGE || 'Hello, This is Agent ${chasitorInfo.name}. How may I help you?',
         'SESSION_END_MESSAGE': process.env.ZL_SESSION_END_MESSAGE || 'Thank you for conversation. Have a nice day.',
