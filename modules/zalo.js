@@ -270,7 +270,7 @@ const zalo_push_send_single = async(message, current_session) => {
                  access_token: authObject.access_token,
               },
               data: postData,
-              url: `${config.Zalo.OA_ENDPOINT}`,
+              url: `${config.Zalo.OA_ENDPOINT}/message/cs`,
             };
   
             axios(options)
