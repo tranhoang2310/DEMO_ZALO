@@ -106,7 +106,11 @@ const zaloStartAgent = async (current_session) => {
         console.log('userProfile:', JSON.stringify(userProfile));
 
         current_session.chatSession.userName = userProfile.data.display_name;
+        console.log('user Name:', current_session.chatSession.userName);
+
         const sessionResponse = await liveAgent.getLiveAgentSession();
+        console.log('sessionResponse:', sessionResponse);
+        
         const session = sessionResponse.data;
         
         current_session.chatSession.chatEstablished = false;
