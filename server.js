@@ -12,7 +12,8 @@ app.use(express.urlencoded({
 
 //This is use for Zalo registration domain
 app.get('/', (req, res)=> {
-    res.send(`<html><head><meta name="zalo-platform-site-verification" content="I8IiBgo0UdPCZUXroB1pKaoKyd2WwYCeDpW"/></head><body></body></html>`);
+    //res.send(`<html><head><meta name="zalo-platform-site-verification" content="I8IiBgo0UdPCZUXroB1pKaoKyd2WwYCeDpW"/></head><body></body></html>`);
+    res.send(`<html><head><meta name="zalo-platform-site-verification" content="R8Un9RQnOGatWFGKxOzN7oshq4J1r0GOCp0" /></head><body></body></html>`);
 });
   
 app.post('/webhook', (req, res) => {
